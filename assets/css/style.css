@@ -1,3 +1,5 @@
+
+/*================General styles=======================*/
 :root {
     --headercolour:#E52521;
     --bodycolour: #049CD8;
@@ -21,7 +23,7 @@ body {
     height:100%;
 }
 
-
+/*=======================================Header styles===================*/
 header {
     width:100%;
 }
@@ -35,6 +37,7 @@ header div {
     width:100%;
 }
 
+/*==================================Timer styles==========================*/
 #scores-region {
     display:flex;
     flex-direction: row;
@@ -45,6 +48,7 @@ header div {
     font-size:1rem;
 }
 
+/*===============================styles for main play area================*/
 #box-container {
     width:93%;
     justify-content: center;   
@@ -85,7 +89,7 @@ header div {
     transform-origin: 57% 0%;
 }
 
-
+/*==========================================styles for start/option buttons=======*/
 #srt-ins-btn {
     margin-top: 20px;
 
@@ -137,3 +141,6 @@ header div {
     75%{transform: rotate(-10deg)}
     100%{transform: rotate(0deg)}
 }
+
+
+
