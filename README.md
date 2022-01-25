@@ -74,7 +74,7 @@ can improve mental function.
   The background image is "blue maze" which was found at [Public Domain Pictures](https://www.publicdomainpictures.net/en/view-image.php?image=307680&picture=blue-maze-background)  
   
   
-  ![Background image]()
+  ![Background image](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/blue-maze-background.webp)
     
   
  </details> 
