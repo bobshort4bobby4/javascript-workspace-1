@@ -51,7 +51,7 @@ can improve mental function.
   
   Red #E52521  
   
-  ![Red#e52521](  
+  ![Red#e52521](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/red%23E52521.png)  
   
   Blue #049CD8  
   
