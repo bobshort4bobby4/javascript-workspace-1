@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><!--Google fonts scripts-->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Titan+One&display=swap" rel="stylesheet">
-        <meta name="description" content="Flippin'Hack a memory game.">
+        <meta name="description" content="Flippin'Hack a memory game."><!--SEO-->
         <meta name="keywords" content="memory card, game, flip card game, childrens memory game">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="shortcut icon" type="image/jpg" href="assets/media/favicon-16x16.png"/>
+        <link rel="stylesheet" href="assets/css/style.css"><!--style sheet link-->
+        <link rel="shortcut icon" type="image/jpg" href="assets/media/favicon-16x16.png"/><!--Favicon link-->
         <title>Flipping-Home</title>
     </head>
 
     <body>
-        <header>
+        <header> <!--Top section of page containing Title -->
             <div id="top-title">
                 <h1>Flippin' Hack</h1>
                 <h6 class="copyright">© Dullard Games 2021.</h6>
         </div>
         </header>    
 
-        <div id=scores-region>
+        <div id=scores-region><!--section of page containing best time and current time-->
             <div class="score">
                 <span>Best Time </span>
                 <span id="bestTimeMin">00</span>
@@ -38,5 +37,70 @@
                 <span id="currTimeSec">00</span>
             </div>
         </div>
+
+        <div id="box-container"><!--Main section of page containing play tiles-->
+        
+            <div class="card">
+                <div  class="blank-side" ><i  aria-hidden = "true"  class ="fas fa-question"></i></div> 
+                <div  class="face-side" ><i aria-hidden="true"  class="fas fa-chess-knight"></i></div>
+            </div>
+            <div class="card" >
+                <div  class="blank-side" ><i  class="fas fa-question"></i></div>
+                <div class="face-side" ><i  class="fas fa-bomb"></i></div>
+            </div>
+            <div class="card" >
+                <div  class="blank-side" ><i   class="fas fa-question"></i></div>
+                <div class="face-side" ><i  class="fas fa-ship"></i></div>
+            </div>
+            <div class="card" >
+                <div  class="blank-side" ><i   class="fas fa-question"></i></div>
+                <div class="face-side" ><i  class="fas fa-chess-knight"></i></div> 
+            </div>
+            <div class="card" >
+                <div  class="blank-side" ><i  class="fas fa-question"></i></div>
+                <div class="face-side" ><i  class="fas fa-apple-alt"></i></div>
+            </div>
+            <div class="card" >
+                <div  class="blank-side" ><i  class="fas fa-question"></i></div>
+                <div class="face-side" ><i  class="fas fa-apple-alt"></i></div>
+            </div>
+            <div class="card" >
+                <div  class="blank-side" ><i  class="fas fa-question"></i></div>
+                <div class="face-side" ><i   class="fas fa-ship"></i></div>
+            </div>
+            <div class="card" >
+                <div class="blank-side" ><i  class="fas fa-question"></i></div>
+                <div class="face-side" ><i  class="fas fa-bomb"></i></div>
+            </div>
+            <div class="card" >
+                <div class="blank-side" ><i  class="fas fa-question"></i></div>
+                <div class="face-side" ><i class="fas fa-glass-martini-alt"></i></div>
+            </div>
+            <div class="card" >
+                <div  class="blank-side" ><i  class="fas fa-question"></i></div>
+                <div class="face-side" ><i  class="fas fa-ambulance"></i></div>
+            </div>
+            <div class="card" >
+                <div  class="blank-side" ><i  class="fas fa-question"></i></div>
+                <div class="face-side" ><i  class="fas fa-glass-martini-alt"></i></div>
+            </div>
+            <div class="card" >
+                <div class="blank-side" ><i class="fas fa-question"></i></div>
+                <div class="face-side" ><i class="fas fa-ambulance"></i></div>
+            </div>
+        
+     </div>
+     
+     <div id="srt-ins-btn"><!--section of page containing start button and show instruction page-->
+        <div id="start-button-div">
+            <button id="start">START</button>
+        </div>
+
+        <div id="instructions-div">
+            <button type="button" id="instructions"><span>Click to <span id ="instruct-span">Show</span> Instructions/Options</span></button>
+        </div>
+     </div>
+
+        <script src="https://kit.fontawesome.com/081f6ba32a.js" crossorigin="anonymous"></script><!--Fontawesome script-->
     </body>
 </html>
