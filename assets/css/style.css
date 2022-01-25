@@ -16,6 +16,12 @@ html {
     height:100%;
 }
 
+body {
+    background-image: url("../media/blue-maze-background.webp"); 
+    height:100%;
+}
+
+
 header {
     width:100%;
 }
@@ -29,7 +35,12 @@ header div {
     width:100%;
 }
 
-body {
-    background-image: url("../media/blue-maze-background.webp"); 
-    height:100%;
+#scores-region {
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-evenly;
+    color:orange;
+    padding:7px 0 7px 0;
+    font-size:1rem;
 }
