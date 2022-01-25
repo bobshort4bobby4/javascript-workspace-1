@@ -21,6 +21,9 @@ html {
 body {
     background-image: url("../media/blue-maze-background.webp"); 
     height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /*=======================================Header styles===================*/
