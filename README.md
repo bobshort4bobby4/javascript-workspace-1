@@ -71,7 +71,10 @@ can improve mental function.
   
   
   
-  The background image is "blue maze" which was found at [Public Domain Pictures](https://www.publicdomainpictures.net/en/view-image.php?image=307680&picture=blue-maze-background)
+  The background image is "blue maze" which was found at [Public Domain Pictures](https://www.publicdomainpictures.net/en/view-image.php?image=307680&picture=blue-maze-background)  
+  
+  
+  ![Background image]()
     
   
  </details> 
