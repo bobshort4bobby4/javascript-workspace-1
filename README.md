@@ -63,7 +63,7 @@ can improve mental function.
   
   Light Salmon#FFa07A  
   
-  ![Lihgt Salmon#FFA07A]()  
+  ![Lihgt Salmon#FFA07A](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/lightsalmon.png)  
   
   Orange #FFA500    
   
