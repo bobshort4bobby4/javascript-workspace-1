@@ -140,6 +140,37 @@ header div {
     100%{transform: rotate(0deg)}
 }
 
+/*================styles for the instruction/options page ==================*/
+
+#instruction-page {
+    background-color:var(--bodycolour);
+    color:var(--ink);
+    height: 100vh;
+    width:100%;
+    position:absolute;
+    top:-739px;
+    text-align: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+#inst-btn {
+    text-align: center;
+    position: relative;
+    background-color: var(--bodycolour);
+    font-size: 0.8rem;
+    margin: 16px auto;
+    display: block;
+}
+/*
+#instruction-page h1, #instruction-page h3 {
+    position:relative;
+    top:-553px;
+    color:var(--ink);
+    background-color: var(--bodycolour);
+    padding:5px;
+}*/
+
 /*=========================================================MEDIA QUERIES===================================*/
 /*=========================================================================================================*/
 /*=========================================================================================================*/
