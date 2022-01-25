@@ -154,9 +154,63 @@ header div {
         width:calc(17% - 10px) !important;
         transform-origin: 60%;
     }
-
-    #instruction-page p {
-        width:93%
-    }
+ 
 }
     
+@media screen and (min-width:425px) {
+    #box-container {
+        width:98%;
+    } 
+
+    header {
+        width:100%;
+    }
+
+    #scores-region {
+        font-size: 1.3rem;;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+
+    #box-container {
+        width: 97%;
+    }
+
+    .card {
+        width:21%;
+    }
+
+
+}
+
+@media screen and (min-width:1024px) {
+
+    #box-container {
+        width:50%;
+        margin:1% 25%;
+    }
+
+    .card {
+        font-size:32px;
+        width:21%;
+    }
+
+    #scores-region {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width:1700px) {
+    #box-container {
+        width:50%;
+        margin:0 25%;
+        margin-top:140px;
+    }
+   .card {
+        width: 15%;
+    }
+
+
+}
