@@ -67,7 +67,7 @@ can improve mental function.
   
   Orange #FFA500    
   
-  ![Orange#FFA500]()  
+  ![Orange#FFA500](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/orange.png)  
   
   
   
