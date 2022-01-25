@@ -55,7 +55,7 @@ can improve mental function.
   
   Blue #049CD8  
   
-  ![Blue#049cd8]()  
+  ![Blue#049cd8](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/blue%23049CD8.png)  
   
   Black #000000  
   
