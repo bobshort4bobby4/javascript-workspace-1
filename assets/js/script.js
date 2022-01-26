@@ -15,6 +15,14 @@ cards.forEach(card => card.style.pointerEvents="none");
 
 cards.forEach(card => card.addEventListener('click', turnCard));//call turnCard function when card clicked
 
+
+/*eventlistenr for modal close x---*/
+let closex = window.document.querySelector(".close");
+let mod = document.querySelector(".modal-wrapper");
+closex.addEventListener("click", hideModal);
+
+mod.addEventListener("click",hideModal);//event listener for modal close on entire screen
+
 /*event listener for start button*/
 let startButton = document.getElementById("start");
 startButton.classList.add("startthrop"); //begin the start button animation
@@ -242,7 +250,7 @@ return array;
  * A function to declare victory
  */
  function victory() {
-    console.log("in victory function")
+    showModal();
     setTimeout(()=> {
     cards.forEach(card => card.style.pointerEvents="none");
     cards.forEach(card => card.classList.remove("turn"));
