@@ -165,6 +165,8 @@ header div {
 
 .show-instructions {
     top:0 !important;
+    transition: top 1s;
+    transition-timing-function:ease-in-out;
   
 }
 /*
