@@ -81,8 +81,15 @@ can improve mental function.
     
   
   
-  ![](https://github.com/bobshort4bobby4/Flippin--Game-pp2/blob/main/assets/Images/titan-one.png)
-  <br>
+  ![font example](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/titan1-design.png)
+    
+  
+  ##### Wireframes
+  CTRL + Click to open in a new tab.
+  
+  [Mobile WireFrames]()
+  [Tablet WireFrames]()
+  [Desktop WireFrames]()
     
   
  </details> 
