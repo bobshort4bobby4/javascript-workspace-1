@@ -1,3 +1,11 @@
+# **Flippin' Hack**
+
+
+Project is deployed [here]()
+
+Github repository is [here](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/)
+<br>
+
 # Introduction
 This project is the second one I've undertaken as part of the Full Stack Software Diploma course at [Codeinstitute.net](https://www.CodeInstitute.net).
 
@@ -114,9 +122,8 @@ can improve mental function.
   1. Select Branch Main and leave /root unchanged.
   1. Click 'Save'.
   1. The URL for the website will be shown in a panel towards the top of the page.  After a brief wait it will turn green indicating the website is published.
-    <br><br>
-    ![ghpages-published]()
-)<br>
+    
+  ![ghpages-published](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/Screenshot%202022-01-26%20151715.png) 
  
 #### Forking
   Forking a Github repository is the the process of making a copy of any repository that you can use without affecting the original, this original is known as the 
