@@ -249,3 +249,19 @@ return array;
     },1000);
     
 }
+
+/**
+ * A function to  display victory screen
+ */
+ function showModal() {
+    mod = document.querySelector(".modal-wrapper");
+    mod.style.display = "block";
+}
+
+/**
+ * a function to hide victory screen
+ */
+ function hideModal() {
+    mod.style.display = "none";
+    startButton.style.animationPlayState = "running"; // starts the start button animation while not playing 
+}
