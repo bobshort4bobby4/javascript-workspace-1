@@ -169,6 +169,29 @@ header div {
     transition-timing-function:ease-in-out;
   
 }
+
+#instruction-page p {
+    margin: 10px auto;
+}
+
+#instruction-page h3 {
+    margin: 15px auto;
+    font-size:1.2em;
+}
+
+#inst-btn {
+    font-size:1.2em;
+    margin-top:10px;
+    border: 2px solid black;
+    border-radius:10px;
+}
+
+#easy-hard {
+    border: 2px solid black;
+    border-radius:10px;
+    padding:5px;
+    margin: 10px auto;
+}
 /*
 #instruction-page h1, #instruction-page h3 {
     position:relative;
@@ -202,6 +225,10 @@ header div {
     #scores-region {
         font-size: 1.3rem;;
     }
+
+    #instruction-page {
+        font-size:1.1rem;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -215,6 +242,9 @@ header div {
         width:21%;
     }
 
+    #instruction-page {
+        font-size:1.2rem;
+    }
 
 }
 
@@ -233,6 +263,15 @@ header div {
     #scores-region {
         font-size: 2rem;
     }
+
+    #instruction-page {
+         font-size:1.3rem;
+     }
+
+    #instruct-p {
+        width:75%;
+    }
+    
 }
 
 @media screen and (min-width:1700px) {
@@ -243,6 +282,14 @@ header div {
     }
    .card {
         width: 15%;
+    }
+
+    #instruction-page p {
+        margin: 13px auto;
+    }
+    
+    #instruction-page h3 {
+        margin: 20px auto;
     }
 
 
