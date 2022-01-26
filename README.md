@@ -115,7 +115,8 @@ can improve mental function.
   1. Click 'Save'.
   1. The URL for the website will be shown in a panel towards the top of the page.  After a brief wait it will turn green indicating the website is published.
     <br><br>
-    ![ghpages-published]()<br>
+    ![ghpages-published]()
+)<br>
  
 #### Forking
   Forking a Github repository is the the process of making a copy of any repository that you can use without affecting the original, this original is known as the 
