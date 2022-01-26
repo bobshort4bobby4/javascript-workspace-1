@@ -87,9 +87,9 @@ can improve mental function.
   ##### Wireframes
   CTRL + Click to open in a new tab.
   
-  [Mobile WireFrames]()
-  [Tablet WireFrames]()
-  [Desktop WireFrames]()
+  [Mobile WireFrames]()  
+  [Tablet WireFrames]()  
+  [Desktop WireFrames](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/flippin-desktopwf-pp2.pdf)
     
   
  </details> 
