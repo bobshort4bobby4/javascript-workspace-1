@@ -165,11 +165,11 @@ function startGame() {
         numberOfMatches++;
         if(numberOfMatches === 6 && diffToggle === "easy") {
          
-            /*victory(); tbd*/
+            victory(); 
         }
         if(numberOfMatches === 9 && diffToggle === "hard"){
           
-            /*victory(); tbd*/
+            victory(); 
         }
        
         return;
@@ -235,5 +235,17 @@ return array;
  function slideInstruction(){
     let page = window.document.getElementById("instruction-page");
      page.classList.toggle("show-instructions");
+    
+}
+
+/**
+ * A function to declare victory
+ */
+ function victory() {
+    console.log("in victory function")
+    setTimeout(()=> {
+    cards.forEach(card => card.style.pointerEvents="none");
+    cards.forEach(card => card.classList.remove("turn"));
+    },1000);
     
 }
