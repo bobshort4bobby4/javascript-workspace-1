@@ -20,6 +20,15 @@ let startButton = document.getElementById("start");
 startButton.classList.add("startthrop"); //begin the start button animation
 startButton.addEventListener("click", startGame);
 
+/*controls to hide/show instruction page*/
+
+let hideOption = window.document.getElementById("inst-btn"); // hide instruction
+hideOption.addEventListener("click", slideInstruction);
+
+let menu_btn = document.getElementById('instructions'); // show Instructions
+menu_btn.addEventListener("click", slideInstruction);
+
+
 
 /**
  * function to start and run game
@@ -217,4 +226,14 @@ while (i--) {
     array[j] = temp;
 }
 return array;
+}
+
+
+/***
+ * a function to handle the instruction page
+ */
+ function slideInstruction(){
+    let page = window.document.getElementById("instruction-page");
+     page.classList.toggle("show-instructions");
+    
 }

@@ -162,6 +162,11 @@ header div {
     margin: 16px auto;
     display: block;
 }
+
+.show-instructions {
+    top:0 !important;
+  
+}
 /*
 #instruction-page h1, #instruction-page h3 {
     position:relative;
