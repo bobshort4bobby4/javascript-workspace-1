@@ -26,7 +26,7 @@ let soundfxToggle = false;
 let cards = document.querySelectorAll('.card');
 console.log(cards);
 cards.forEach(card => card.style.pointerEvents="none"); // disable all cards untill start
-/* why is not working ??*/
+
 
 cards.forEach(card => card.addEventListener('click', turnCard)); // call turnCard function when card clicked
 
@@ -53,7 +53,7 @@ mod.addEventListener("click",hideModal);//event listener for modal close on enti
 /*event listener for start button*/
 let startButton = document.getElementById("start");
 console.log(startButton);
-startButton.classList.add("startthrop"); //begin the start button animation   not working at present reason unkown to me
+startButton.classList.add("startthrop"); //begin the start button animation  
 startButton.addEventListener("click", startGame);
 
 /*controls to hide/show instruction page*/

@@ -163,9 +163,13 @@ header div {
     text-align: center;
     position: relative;
     background-color: var(--bodycolour);
-    font-size: 0.8rem;
     margin: 16px auto;
     display: block;
+    width:90%;
+    font-size:1.2em;
+    margin-top:10px;
+    border: 2px solid black;
+    border-radius:10px;
 }
 
 .show-instructions {
@@ -185,10 +189,7 @@ header div {
 }
 
 #inst-btn {
-    font-size:1.2em;
-    margin-top:10px;
-    border: 2px solid black;
-    border-radius:10px;
+    
 }
 
 #easy-hard {
@@ -259,7 +260,11 @@ header div {
     }
 
     .resize-cards {
-        transform-origin: 59% 0%;
+        transform-origin: 59% 0% !important;
+    }
+
+    .turn {
+        transform-origin: 55%;
     }
 }
 
@@ -278,9 +283,13 @@ header div {
         font-size:1.2rem;
     }
 
+    .turn {
+        transform-origin: 53% 0;
+    }
+
     .resize-cards {
         width:calc(16% - 10px) !important;
-        transform-origin: 55% 0%;
+        transform-origin: 55% 0% !important;
     }
 
 }
@@ -308,9 +317,37 @@ header div {
     #instruct-p {
         width:75%;
     }
+
+    .turn {
+        transform-origin: 54% 0;
+    }
+
+    .resize-cards {
+        width:calc(16% - 10px) !important;
+        transform-origin: 57% 0% !important;
+    }
+
+    #inst-btn {
+        width:75%;
+    }
     
 }
 
+@media screen and (min-width:1440px) {
+    .turn {
+        transform-origin: 53% 0;
+    }
+
+    .resize-cards {
+        width: calc(17% - 10px) !important;
+        transform-origin: 54% 0% !important;      
+    }
+
+    #inst-btn {
+        width:65%;
+    }
+}
+ 
 @media screen and (min-width:1700px) {
     #box-container {
         width:50%;
@@ -337,8 +374,14 @@ header div {
 
 }
 
+@media screen and (min-width:1900px) {
+    .resize-cards {
+        transform-origin: 54% 0% !important;
+    }
+}
+
 /*=======================landscape queries========================*/
-@media screen and (orientation:landscape) and (min-height:300px)  and (max-height:425px) {
+@media screen and (orientation:landscape) and (min-height:280px)  and (max-height:425px) {
 
 
     #box-container {
@@ -352,7 +395,11 @@ header div {
     .card {
         width:calc(15% - 10px);
         font-size:22px;
-        transform-origin: 55%;
+        
+    }
+
+    .turn {
+        transform-origin: 57%;
     }
 
     #start-button-div { /*move buttons inline */
@@ -372,6 +419,26 @@ header div {
         display: flex;
         flex-direction: row;
     }
+
+    .resize-cards {
+        width:calc(11% - 10px)!important;
+        transform-origin: 59% !important;
+    }
+
+    #instruction-page {
+        /*height:87vh;*/
+         font-size:0.7rem;
+     }
+
+     #instruction-page h1, #instruction-page h3 {
+        padding:0;
+        margin:8px auto;
+    }
+
+    #instruction-page p {
+        margin:8px auto;
+    }
+ 
 }
 
 
