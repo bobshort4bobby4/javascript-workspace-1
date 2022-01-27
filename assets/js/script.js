@@ -56,6 +56,7 @@ function startGame() {
     if(musicToggle) {
         gameMusic.load();
         gameMusic.play();
+        gameMusic.volume = 0.2;
     }
     firstItemClicked = true;// reset in case user did not complete last game cycle
     cards.forEach(card => card.classList.remove("turn"));//remove turn class from all cards
@@ -301,6 +302,7 @@ return array;
         musicToggle = true;
         gameMusic.load();
         gameMusic.play();
+        gameMusic.volume = 0.2;
         musicOption.innerHTML = '<i class="fas fa-volume-up"></i>'; // sets the icon on the options page
     }
 }
