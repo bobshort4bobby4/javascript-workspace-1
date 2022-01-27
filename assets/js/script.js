@@ -4,11 +4,6 @@ let diffToggle = "easy";
 let firstItemClicked = true;
 let card1;
 let card2;
-let clock;
-let currentSeconds  = 0;
-let currentMinutes = 0;
-let bestSeconds;
-let bestMinutes;
 let numberOfMatches = 0;
 
 // music variables
@@ -22,6 +17,13 @@ let victorySound = new Audio("./assets/media/victory.wav");
 let matchsound = new Audio("./assets/media/shimmer.flac");
 let unmatchedSound = new Audio("./assets/media/lose-sound.wav");
 let soundfxToggle = false;
+
+// timer variables
+let clock;
+let currentSeconds  = 0;
+let currentMinutes = 0;
+let bestSeconds;
+let bestMinutes;
 
 let cards = document.querySelectorAll('.card');
 console.log(cards);
@@ -157,12 +159,13 @@ function startGame() {
         cards.forEach(card => card.addEventListener('click', turnCard));
         }
 
-    
+        currentSeconds = 0;
+        currentMinutes = 0;
     /*call the function to populate panels face-side passing in the icons and the random placing*/
     populateBehindCards(cardIcons, scrambledArray);
     //--make cards clickable
     cards.forEach(card=>card.style.pointerEvents = "auto");
-    
+    clock = window.setInterval(timer,1000); // start clock
     }   
 /*====end of startgame function===*/
 
@@ -371,4 +374,22 @@ return array;
         diffToggle = "easy";
         diffOption.innerText = "Easy";
     }
+}
+
+/**
+ *  A function to update the timer.
+ */
+ function timer() {
+    currentSeconds++;
+
+    if( currentSeconds/ 60 === 1){//if seconds over 60 update minute
+        currentMinutes++;
+        currentSeconds = 0;
+    }
+
+    if(currentSeconds < 10){//if seconds less than ten add a preceeding 0
+        currentSeconds = "0" + currentSeconds.toString();
+    }
+    document.getElementById("currTimeSec").innerText = currentSeconds;
+    document.getElementById("currTimeMin").innerText = currentMinutes;
 }
