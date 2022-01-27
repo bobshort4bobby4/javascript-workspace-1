@@ -9,6 +9,7 @@ let currentSeconds  = 0;
 let currentMinutes = 0;
 let bestSeconds;
 let bestMinutes;
+let numberOfMatches = 0;
 
 // music variables
 let musicToggle = false;
@@ -22,12 +23,16 @@ let matchsound = new Audio("./assets/media/shimmer.flac");
 let unmatchedSound = new Audio("./assets/media/lose-sound.wav");
 let soundfxToggle = false;
 
-let cards = document.querySelectorAll('.card');//disable all cards untill start
-let numberOfMatches = 0;
+let cards = document.querySelectorAll('.card');
+console.log(cards);
+cards.forEach(card => card.style.pointerEvents="none"); // disable all cards untill start
+/* why is not working ??*/
 
-cards.forEach(card => card.style.pointerEvents="none");
+cards.forEach(card => card.addEventListener('click', turnCard)); // call turnCard function when card clicked
 
-cards.forEach(card => card.addEventListener('click', turnCard));//call turnCard function when card clicked
+/*eventlistener for difficulty option*/
+let diffOption = window.document.getElementById("easy-hard");
+diffOption.addEventListener("click", toggleDifficulty);
 
 /*eventlistener for soundfx option*/
 let soundfxOption = window.document.getElementById("soundfx-option");
@@ -37,20 +42,21 @@ soundfxOption.addEventListener("click", toggleSoundfx);
 let musicOption = window.document.getElementById("music-option");
 musicOption.addEventListener("click", toggleMusic);
 
-/*eventlistenr for modal close x---*/
+/*eventlistenr for modal close ---*/
 let closex = window.document.querySelector(".close");
 let mod = document.querySelector(".modal-wrapper");
-closex.addEventListener("click", hideModal);
-
+closex.addEventListener("click", hideModal); // eventlistener for modal close on x
 mod.addEventListener("click",hideModal);//event listener for modal close on entire screen
+
+
 
 /*event listener for start button*/
 let startButton = document.getElementById("start");
-startButton.classList.add("startthrop"); //begin the start button animation
+console.log(startButton);
+startButton.classList.add("startthrop"); //begin the start button animation   not working at present reason unkown to me
 startButton.addEventListener("click", startGame);
 
 /*controls to hide/show instruction page*/
-
 let hideOption = window.document.getElementById("inst-btn"); // hide instruction
 hideOption.addEventListener("click", slideInstruction);
 
@@ -63,6 +69,7 @@ menu_btn.addEventListener("click", slideInstruction);
  * function to start and run game
  */
 function startGame() {
+    console.log("in startgame function)");
     startButton.style.animationPlayState = "paused"; // stops the start button animation while playing 
     if(musicToggle) {
         gameMusic.load();
@@ -72,12 +79,13 @@ function startGame() {
     firstItemClicked = true;// reset in case user did not complete last game cycle
     cards.forEach(card => card.classList.remove("turn"));//remove turn class from all cards
    
-    }
+    
    
     let strtButton = document.getElementById("start");//animate the start button
-    strtButton.classList.remove("startthrop");
+    startButton.classList.remove("startthrop");
 
     if(diffToggle === "easy") {//set up for easy option
+        console.log("in easy if statement");
         cards = document.querySelectorAll('.card');
         let numberOfCardDivs = cards.length;
         if(numberOfCardDivs === 18) {//if previous game was hard remove extra cards
@@ -109,6 +117,7 @@ function startGame() {
     }
    
     if(diffToggle === "hard"){//set up for hard option
+        console.log("in hard if statement");
         panelarray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
         scrambledArray = scramble(panelarray);
         cardIcons = [
@@ -154,7 +163,7 @@ function startGame() {
     //--make cards clickable
     cards.forEach(card=>card.style.pointerEvents = "auto");
     
-    
+    }   
 /*====end of startgame function===*/
 
 
@@ -348,5 +357,18 @@ return array;
     } else {
         soundfxToggle = true;
         soundfxOption.innerHTML = '<i class="fas fa-volume-up"></i>'; // sets the icon on the options page
+    }
+}
+
+/**
+ * A function to change difficulty level
+ */
+ function toggleDifficulty() {
+    if(diffToggle === "easy"){
+        diffToggle  = "hard";
+        diffOption.innerText = "Hard";
+    }else{
+        diffToggle = "easy";
+        diffOption.innerText = "Easy";
     }
 }

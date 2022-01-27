@@ -92,6 +92,11 @@ header div {
     transform-origin: 57% 0%;
 }
 
+.resize-cards {
+    width: calc(18% - 10px) !important;
+    transform-origin: 62% 0%;
+}
+
 /*==========================================styles for start/option buttons=======*/
 #srt-ins-btn {
     margin-top: 20px;
@@ -252,6 +257,10 @@ header div {
     #instruction-page {
         font-size:1.1rem;
     }
+
+    .resize-cards {
+        transform-origin: 59% 0%;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -267,6 +276,11 @@ header div {
 
     #instruction-page {
         font-size:1.2rem;
+    }
+
+    .resize-cards {
+        width:calc(16% - 10px) !important;
+        transform-origin: 55% 0%;
     }
 
 }
@@ -313,6 +327,11 @@ header div {
     
     #instruction-page h3 {
         margin: 20px auto;
+    }
+
+    .resize-cards {
+        transform-origin: 53% 0%;
+        width: calc(15% - 10px) !important;
     }
 
 
