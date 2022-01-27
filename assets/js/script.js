@@ -231,10 +231,12 @@ function startGame() {
         if(numberOfMatches === 6 && diffToggle === "easy") {
             gameMusic.pause();
             victory(); 
+            stopClock();
         }
         if(numberOfMatches === 9 && diffToggle === "hard"){
             gameMusic.pause();
             victory(); 
+            stopClock();
         }
        
         return;
@@ -392,4 +394,26 @@ return array;
     }
     document.getElementById("currTimeSec").innerText = currentSeconds;
     document.getElementById("currTimeMin").innerText = currentMinutes;
+}
+
+/**
+ * A function to stop clock
+ */
+ function stopClock() {
+    window.clearInterval(clock);
+    updateBestScore(currentSeconds, currentMinutes);
+ }
+
+ /**
+ * a function to update the best score
+ */
+function updateBestScore(currentSeconds,currentMinutes) {
+    bestSeconds = document.getElementById("bestTimeSec");
+    bestMinutes = document.getElementById("bestTimeMin");
+    let bestSec = (Number(bestSeconds.textContent)) + (Number(bestMinutes.textContent) * 60);//convert times to seonds for comparasion
+    let scoreSec = currentSeconds + (currentMinutes * 60);
+    if(bestSec === 0 || scoreSec < bestSec) {//change  Best Score if current one better or if first play-through
+        bestMinutes.textContent = currentMinutes;
+        bestSeconds.textContent = currentSeconds;
+    }     
 }
