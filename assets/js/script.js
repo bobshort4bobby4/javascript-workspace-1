@@ -4,7 +4,13 @@ let diffToggle = "easy";
 let firstItemClicked = true;
 let card1;
 let card2;
-
+let clock;
+let currentSeconds  = 0;
+let currentMinutes = 0;
+let bestSeconds;
+let bestMinutes;
+let musicToggle = false;
+let gameMusic = new Audio("./assets/media/gametune.mp3");
 
 
 
@@ -15,6 +21,10 @@ cards.forEach(card => card.style.pointerEvents="none");
 
 cards.forEach(card => card.addEventListener('click', turnCard));//call turnCard function when card clicked
 
+
+/*eventlistener for music option*/
+let musicOption = window.document.getElementById("music-option");
+musicOption.addEventListener("click", toggleMusic);
 
 /*eventlistenr for modal close x---*/
 let closex = window.document.querySelector(".close");
@@ -43,6 +53,10 @@ menu_btn.addEventListener("click", slideInstruction);
  */
 function startGame() {
     startButton.style.animationPlayState = "paused"; // stops the start button animation while playing 
+    if(musicToggle) {
+        gameMusic.load();
+        gameMusic.play();
+    }
     firstItemClicked = true;// reset in case user did not complete last game cycle
     cards.forEach(card => card.classList.remove("turn"));//remove turn class from all cards
    
@@ -272,4 +286,21 @@ return array;
  function hideModal() {
     mod.style.display = "none";
     startButton.style.animationPlayState = "running"; // starts the start button animation while not playing 
+}
+
+
+/**
+ * A function to toggle music
+ */
+ function toggleMusic() {
+    if(musicToggle === true){
+        musicToggle  = false;
+        musicOption.innerHTML = '<i class="fas fa-volume-mute"></i>'; // sets the icon on the options page
+       gameMusic.pause();
+    }else{
+        musicToggle = true;
+        gameMusic.load();
+        gameMusic.play();
+        musicOption.innerHTML = '<i class="fas fa-volume-up"></i>'; // sets the icon on the options page
+    }
 }
