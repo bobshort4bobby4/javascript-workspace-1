@@ -174,7 +174,7 @@ function startGame() {
  * @returns 
  */
  function turnCard(){
-
+    
     if(freezeOut){//prevents user clicking on card during 1 second delay before unmatched cards are turned back face down
         return;
     }
@@ -196,6 +196,7 @@ function startGame() {
         firstItemClicked = false;    
         return;
     }
+
     firstItemClicked = true;  // resets this  value so next time this function is called preceeding if block is run
     this.classList.add("turn");
      //code for specific icon sounds
@@ -209,7 +210,7 @@ function startGame() {
         } //end of sound code block
     }
     card2 = this;
-   freezeOut = true;
+    freezeOut = true;
     card1.style.pointerEvents = "auto";//resets pointerevents for 1st choice card
     compare(card1,card2);//call compare function
 }
@@ -251,7 +252,7 @@ function startGame() {
             card2.classList.remove("turn");
             card1 = null;// re-set cards
             card2 = null;
-            freezeOut = true // allows turncard function to run
+            freezeOut = false // stops turncard function running
         return;
           }, 1000);
         firstItemClicked = true;
