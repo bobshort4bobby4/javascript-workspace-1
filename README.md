@@ -144,7 +144,19 @@ can improve mental function.
   
   #### Lighthouse
   The web page was tested using the Lighthouse feature on the chrome browser giving the following result.
-  ![lighthouse desktop result]()
+  ![lighthouse desktop result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/lighthouseresultpp2.png)  
+    
+  
+  #### W3c CSS Validator
+  The css file was tested using the W3c CSS validator showing no errors or warnings. <br>
+  
+  ![css validation result]()
+  
+  #### W3c HTML Validator
+  The HTML was tested with the W3c HTML Validator with no error returned.<br>
+  
+  ![html validation result]()
+  
   
   
   </details>
