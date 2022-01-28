@@ -252,7 +252,7 @@ function startGame() {
             card2.classList.remove("turn");
             card1 = null;// re-set cards
             card2 = null;
-            freezeOut = false // stops turncard function running
+            freezeOut = false; // stops turncard function running
         return;
           }, 1000);
         firstItemClicked = true;
