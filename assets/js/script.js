@@ -174,6 +174,9 @@ function startGame() {
  */
  function turnCard(){
 
+    if(freezeOut){//prevents user clicking on card during 1 second delay before unmatched cards are turned back face down
+        return;
+    }
     if(firstItemClicked) {
          //code for specific icon sounds
         let ico1 = this.getElementsByClassName("icon");
@@ -192,7 +195,7 @@ function startGame() {
         firstItemClicked = false;    
         return;
     }
-    firstItemClicked = true;
+    firstItemClicked = true;  // resets this  value so next time this function is called preceeding if block is run
     this.classList.add("turn");
      //code for specific icon sounds
      let ico1 = this.getElementsByClassName("icon");
@@ -205,7 +208,7 @@ function startGame() {
         } //end of sound code block
     }
     card2 = this;
-   
+   freezeOut = true;
     card1.style.pointerEvents = "auto";//resets pointerevents for 1st choice card
     compare(card1,card2);//call compare function
 }
@@ -215,28 +218,29 @@ function startGame() {
  * a function to compare the two cards takes in two cards and calls victory functon if all matched
  */
  function compare(card1, card2){
-  
+
+    freezeOut = true;
     let ico1 = card1.getElementsByClassName("icon");
     let ico2 = card2.getElementsByClassName("icon");
     if(ico1[0].getAttribute("data-type") === ico2[0].getAttribute("data-type"))     {
         if(soundfxToggle){matchsound.play();}
-        card1.style.pointerEvents = "none";
-        card2.style.pointerEvents = "none";
+        card1.style.pointerEvents = "none"; // stops this card being turned again in this game cycle
+        card2.style.pointerEvents = "none"; // stops this card being turned again in this game cycle
         card1 = null;
         card2 = null;
         firstItemClicked = true;
-        numberOfMatches++;
-        if(numberOfMatches === 6 && diffToggle === "easy") {
+        numberOfMatches++; 
+        if(numberOfMatches === 6 && diffToggle === "easy") { // checks if victory conditions are met
             gameMusic.pause();
             victory(); 
-            stopClock();
+           
         }
-        if(numberOfMatches === 9 && diffToggle === "hard"){
+        if(numberOfMatches === 9 && diffToggle === "hard"){  // checks if victory conditions are met
             gameMusic.pause();
             victory(); 
-            stopClock();
+            
         }
-       
+        freezeOut = false;
         return;
         } else {
         // do the un-matched stuff
@@ -246,7 +250,7 @@ function startGame() {
             card2.classList.remove("turn");
             card1 = null;// re-set cards
             card2 = null;
-            
+            freezeOut = true // allows turncard function to run
         return;
           }, 1000);
         firstItemClicked = true;
@@ -319,7 +323,7 @@ return array;
 }
 
 /**
- * A function to  display victory screen
+ * A function toupdate and display victory screen
  */
  function showModal() {
     document.getElementById("modal-time-minutes").innerText = currentMinutes;
