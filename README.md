@@ -148,14 +148,22 @@ can improve mental function.
     
   
   #### W3c CSS Validator
-  The css file was tested using the W3c CSS validator showing no errors or warnings. <br>
+  The css file was tested using the W3c CSS validator showing no errors or warnings.  
   
-  ![css validation result]()
+  
+  ![css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/css-validation-pp2.png)
   
   #### W3c HTML Validator
-  The HTML was tested with the W3c HTML Validator with no error returned.<br>
+  The HTML was tested with the W3c HTML Validator with no error returned.  
   
-  ![html validation result]()
+  
+  ![html validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/html-validation-pp2.png)  
+  
+  #### JSHint
+  The Javascript file was validated using JSHint, with the following result.  The `New JavaScript features (ES6)` option was ticked in the 
+  Configure menu.<br>
+  
+  ![jshint result]()
   
   
   
