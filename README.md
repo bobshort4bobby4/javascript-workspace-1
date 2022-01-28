@@ -3,8 +3,13 @@
 
 Project is deployed [here](https://bobshort4bobby4.github.io/Flipping-Tiles-Game-PP2/)
 
-Github repository is [here](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/)
-<br>
+Github repository is [here](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/)  
+
+  
+    
+  
+  
+![responsive screen shot](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/amiresponsivepp2.png)
 
 # Introduction
 This project is the second one I've undertaken as part of the Full Stack Software Diploma course at [Codeinstitute.net](https://www.CodeInstitute.net).
@@ -71,7 +76,7 @@ can improve mental function.
   
   Light Salmon#FFa07A  
   
-  ![Lihgt Salmon#FFA07A](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/lightsalmon.png)  
+  ![Light Salmon#FFA07A](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/lightsalmon.png)  
   
   Orange #FFA500    
   
@@ -102,7 +107,48 @@ can improve mental function.
   
  </details> 
  
+ # Technologies Used
+<details>
+  <summary>Technologies Used</summary>
+  
+  #### Languages Used
+  
+  - HTML5
+  - CSS
+  - Javascript
+  
+  #### Applications Used
+  
+  - [Balsamiq](https://www.balsamiq.com) was used to create wireframes for this project.
+  - [Google Fonts](https://fonts.google.com/) fonts were downloaded from Google Fonts.
+  - [Fontawesome](https://www.fontawesome.com) icons were downloaded from Font Awesome.com.
+  - [Git](https://git-scm.com/) Git was used for version control.
+  - [GitHub](https://github.com/) GitHub is used to store the projects code.
+  - [Gitpages](https://pages.github.com/) Gitpages are used to deploy the site.
+  - [Chrome Developer Tools](https://https://developer.chrome.com/docs/devtools/) used for layout and responsive testing.
+  - [Wave](https://wave.webaim.org/) used for accessibility testing.
+  - [favICO.com](https://https://convertico.com/favicon/) used for creating favicon.
+  - [W3 Validator](https://jigsaw.w3.org/css-validator/) used to test html and css code.
+  - [Jshint](https://https://jshint.com/) used to validate Javascript code.
+  - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.
+  - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.
+  - [https://caniuse.com/webp](https://caniuse.com/webp)  used to check compatibility of the webp file format.
  
+</details>
+
+
+# Testing 
+<details>
+  <summary>Testing</summary>
+  
+  
+  #### Lighthouse
+  The web page was tested using the Lighthouse feature on the chrome browser giving the following result.
+  ![lighthouse desktop result]()
+  
+  
+  </details>
+
  # Deployment
   <details>
     
