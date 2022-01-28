@@ -5,6 +5,7 @@ let firstItemClicked = true;
 let card1;
 let card2;
 let numberOfMatches = 0;
+let freezeOut = false;
 
 // music variables
 let musicToggle = false;
