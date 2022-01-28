@@ -81,10 +81,6 @@ function startGame() {
     firstItemClicked = true;// reset in case user did not complete last game cycle
     cards.forEach(card => card.classList.remove("turn"));//remove turn class from all cards
    
-    
-   
-    let strtButton = document.getElementById("start");//animate the start button
-    startButton.classList.remove("startthrop");
 
     if(diffToggle === "easy") {//set up for easy option
         console.log("in easy if statement");
@@ -315,6 +311,8 @@ return array;
     cards.forEach(card => card.style.pointerEvents="none");
     cards.forEach(card => card.classList.remove("turn"));
     },1000);
+    stopClock();
+    numberOfMatches = 0;
     
 }
 
@@ -322,6 +320,9 @@ return array;
  * A function to  display victory screen
  */
  function showModal() {
+    document.getElementById("modal-time-minutes").innerText = currentMinutes;
+    document.getElementById("modal-time-seconds").innerText = currentSeconds;
+    document.getElementById("modal-difficilty").innerText = diffToggle.toUpperCase();
     mod = document.querySelector(".modal-wrapper");
     mod.style.display = "block";
 }
