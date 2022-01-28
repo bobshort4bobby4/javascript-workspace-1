@@ -82,7 +82,7 @@ function startGame() {
     window.clearInterval(clock);//reset timer 
     firstItemClicked = true;// reset in case user did not complete last game cycle
     cards.forEach(card => card.classList.remove("turn"));//remove turn class from all cards
-   
+                                                        // the above line may not be needed any longer as cards are turned in victory
 
     if(diffToggle === "easy") {//set up for easy option
         console.log("in easy if statement");
