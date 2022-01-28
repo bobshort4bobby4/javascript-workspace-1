@@ -152,18 +152,21 @@ can improve mental function.
   
   
   ![css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/css-validation-pp2.png)
+    
+    
   
   #### W3c HTML Validator
   The HTML was tested with the W3c HTML Validator with no error returned.  
   
   
   ![html validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/html-validation-pp2.png)  
+    
   
   #### JSHint
   The Javascript file was validated using JSHint, with the following result.  The `New JavaScript features (ES6)` option was ticked in the 
   Configure menu.<br>
   
-  ![jshint result]()
+  ![jshint result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/jshint-validation-pp2.png)
   
   
   
@@ -175,7 +178,8 @@ can improve mental function.
   <summary>Deployment</summary>
   
   This project was built on the Gitpod IDE using the Code Institute template found here:<br>https://github.com/Code-Institute-Org/gitpod-full-template
-    <br>
+      
+  
     
 #### GitHub Pages
    
