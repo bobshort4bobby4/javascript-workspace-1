@@ -136,6 +136,19 @@ can improve mental function.
  
 </details>
 
+
+# Testing 
+<details>
+  <summary>Testing</summary>
+  
+  
+  #### Lighthouse
+  The web page was tested using the Lighthouse feature on the chrome browser giving the following result.
+  ![lighthouse desktop result]()
+  
+  
+  </details>
+
  # Deployment
   <details>
     
