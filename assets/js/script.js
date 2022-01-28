@@ -9,6 +9,7 @@ let numberOfMatches = 0;
 // music variables
 let musicToggle = false;
 let gameMusic = new Audio("./assets/media/gametune.mp3");
+gameMusic.loop = true;
 
 // sound effects variables
 let babyLaugh = new Audio("./assets/media/baby-laugh.mp3");
@@ -78,6 +79,7 @@ function startGame() {
         gameMusic.play();
         gameMusic.volume = 0.2;
     }
+    window.clearInterval(clock);//reset timer 
     firstItemClicked = true;// reset in case user did not complete last game cycle
     cards.forEach(card => card.classList.remove("turn"));//remove turn class from all cards
    
