@@ -193,8 +193,22 @@ can improve mental function.
     
   
     
-  ![accessibility.com result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/web-accessibility-pp2.png)
+  ![accessibility.com result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/web-accessibility-pp2.png)  
     
+    
+  #### Responsiveness
+  Media queries based on screen width were used to ensure the page displayed correctly across a range of screen sizes.
+  Breakpoints used are as follows 375px, 425px, 600px, 768px, 1024px, 1300px, 1440px, 1700px and 1900px.
+  Queries were also implemented for landscape mode (orientation:landscape) at the following 5 breakpoints:  
+  (min-height:280px and max-height:374px),    
+  (min-height:375px and max-height:424px),  
+  (min-height:425px and max-height:595px),  
+  (min-height:596px and max-height:767px),  
+  (min-height:768px and max-height:850px).
+  
+  The responsive testing tool included within the Google Chrome browser was used to test these, all display correctly.  
+  
+
   
     
  
