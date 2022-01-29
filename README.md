@@ -146,7 +146,18 @@ can improve mental function.
   In order to increase player enjoyment and engagement with the site, I felt it was necessary to add an option to increase difficulty.
   This is achieved by simply adding another 6 cards to be matched, from 12 to 18. This option is accessed from the slide-down screen as shown above.  
   It is possible to stop the music and/or sound effects from playing by clicking on the speaker icons, also found on the instruction page.  These features address the user need
-  to be able to vary difficulty and customize gameplay.
+  to be able to vary difficulty and customize gameplay. 
+  
+    
+    
+  ![a picture of the hard difficulty level](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/hard-pp2.png)  
+    
+    
+  ### Modal Screen
+  When the player completes all the matches a modal screen is displayed with a congratulatory message and details of the time taken and the difficulty level.  
+    
+    
+  ![a picture of the victory screen](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/victory-pp2.png)
   
   
   
