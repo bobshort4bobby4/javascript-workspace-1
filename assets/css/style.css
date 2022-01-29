@@ -238,6 +238,7 @@ header div {
     .resize-cards {
         width:calc(17% - 10px) !important;
         transform-origin: 60%;
+      
     }
  
 }
@@ -270,7 +271,7 @@ header div {
 
 @media screen and (min-width:600px) {
     .turn {
-        transform-origin: 54%;
+        transform-origin: 53%;
     }
 
     .resize-cards {
@@ -391,31 +392,30 @@ header div {
 }
 
 /*=======================landscape queries========================*/
-@media screen and (orientation:landscape) and (min-height:280px)  and (max-height:425px) {
 
-
+@media screen and (orientation:landscape) and (min-height:280px)  and (max-height:374px) {
     #box-container {
         margin-top: 8px;
     }
 
-    #score-region {
+    #scores-region {
         font-size:0.8rem;
     }
 
     .card {
         width:calc(15% - 10px);
-        font-size:22px;
-        
+        font-size:22px;  
     }
 
     .turn {
-        transform-origin: 57%;
+        transform-origin: 56%;
     }
 
     #start-button-div { /*move buttons inline */
         left:-23%;
         width:45%;
         left:-11%;
+        margin-top:12px;
     }
 
     #instructions-div {
@@ -432,7 +432,7 @@ header div {
 
     .resize-cards {
         width:calc(11% - 10px)!important;
-        transform-origin: 59% !important;
+        transform-origin: 58% !important;
     }
 
     #instruction-page {
@@ -451,17 +451,154 @@ header div {
  
 }
 
+@media screen and (orientation:landscape) and (min-height:375px)  and (max-height:424px) {
+    
+    #scores-region {
+        font-size:0.9rem;
+    }
 
-@media screen and (orientation:landscape) and (min-height:425px)  and (max-height:680px) {
+    .card {
+        width:calc(15% - 10px);
+        font-size:22px;  
+    }
+
+    .turn {
+        transform-origin: 56%;
+    }
+
+    #start-button-div { /*move buttons inline */
+        left:-23%;
+        width:45%;
+        left:-11%;
+    }
+
+    #start {
+        margin-top:7px;
+    }
+
+    #instructions-div {
+        right:-6%;
+        width:45%;
+        margin-top:0;
+    }
+
+    #srt-ins-btn {
+        margin-top:3px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .resize-cards {
+        width:calc(11% - 10px)!important;
+        transform-origin: 58% !important;
+    }
+
+    #instruction-page {
+        /*height:87vh;*/
+         font-size:0.7rem;
+     }
+
+     #instruction-page h1, #instruction-page h3 {
+        padding:0;
+        margin:8px auto;
+    }
+
+    #instruction-page p {
+        margin:8px auto;
+    }
+}
+
+
+
+@media screen and (orientation:landscape) and (min-height:425px)  and (max-height:595px) {
     #srt-ins-btn {
         margin-top:20px;
     }
 
+    #scores-region {
+        font-size:1rem;
+    }
+
+    .card {
+        width:calc(15% - 10px);
+        font-size:22px;  
+    }
+
+    .turn {
+        transform-origin: 56%;
+    }
+
+    #instruction-page {
+        /*height:87vh;*/
+         font-size:0.8rem;
+     }
+
+     .resize-cards {
+        width:calc(11% - 10px)!important;
+        transform-origin: 58% !important;
+    }
+
+
+
+
 }
 
-@media screen and (orientation:landscape) and (min-width:768px)  and (max-height:800px) {
+@media screen and (orientation:landscape) and (min-height:596px)  and (max-height:767px) {
+    #srt-ins-btn {
+        margin-top:20px;
+    }
+
+    #scores-region {
+        font-size:1rem;
+    }
+
+    .card {
+        width:calc(15% - 10px);
+        font-size:22px;  
+    }
+
     .turn {
         transform-origin: 53%;
     }
 
+    #instruction-page {
+        /*height:87vh;*/
+         font-size:0.8rem;
+     }
+
+     .resize-cards {
+        width:calc(11% - 10px)!important;
+        transform-origin: 56% !important;
+    }
 }
+
+@media screen and (orientation:landscape) and (min-height:768px)  and (max-height:850px) {
+    #box-container {
+        margin: 7% 25%;
+    }
+    #srt-ins-btn {
+        margin-top:20px;
+    }
+
+    #scores-region {
+        font-size:1rem;
+    }
+
+    .card {
+        width:calc(17% - 10px);
+        font-size:33px;  
+    }
+
+    .turn {
+        transform-origin: 56%;
+    }
+
+    #instruction-page {
+         font-size:1.5rem;
+     }
+
+     .resize-cards {
+        width:calc(15% - 10px)!important;
+        transform-origin: 56% !important;
+    }
+}   
