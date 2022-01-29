@@ -107,6 +107,25 @@ can improve mental function.
   
  </details> 
  
+ 
+   
+   
+ # Features
+
+<details>
+  
+  <summary>Features</summary>
+  
+  ### Responsive  Website
+  The site displays properly at a wide range of screen sizes and on landscape mode, further information on this is listed in the testing section.<br>
+  This satisfies the user need to be able to play the game on various devices.  
+  
+  
+  
+  
+  
+  </details>
+ 
  # Technologies Used
 <details>
   <summary>Technologies Used</summary>
@@ -208,15 +227,127 @@ can improve mental function.
   
   The responsive testing tool included within the Google Chrome browser was used to test these, all display correctly.  
   
+  I also used the device specific tool within chrome to test a number of devices representng a wide range of device types.  
+  
+  
+  
+  |Device          |  Result  Portrait           |         Result Landscape      |
+  |----------------|-----------------------------|-------------------------------|
+  | Blackberry Z30 | Displays ok                 | Displays ok                   |
+  | MS Lumia 550   | N/A                         | Displays ok                   |
+  | Nexus 7        | Displays ok                 | Displays ok                   |
+  | iPhone 6/7/8   | Displays ok                 | Displays ok                   |
+  | Galaxy Fold    | Displays ok (single screen) | Displays ok (single screen)   |
+  | Galaxy Fold    | Displays ok (double screen) | Displays ok (double screen)   |
+  | Nest Hub Max   | Displays ok                 | N/A                           |
+  
+  
+  
+    
+   #### Issues Encountered Building The Game
+  A brief summary of some of the difficulties I had building this game and how I attempted to fix them.  
+  
+  
+  I had many problems positioning the two divs I used to make the two-sided card and then to get them to flip satisfactorily.
+  I had to become familiar with many new (to me) css properties such as transform-origin, transform-style, backface-visibility and perspective.
+  
+  I was attempting to build a function using the math random function when I came across the Fisher–Yates shuffle Algorithm on a google search.
+  I used this rather than writing a bespoke function.
+  
+  The next major problem I encountered was within the compare function where the two picked cards are compared.
+  Initially I tried to use the innerText property of the two picked cards as parameters to compare, which worked intermittently, I then used textContent and innerHTML
+  to compare, these worked approximately 75-80% of the time, which I couldn't figure as when the two properties were put through diffchecker
+  they came back as identical.  I then tried to set a data attribute to each card in the populateBehindCards function, I was using the counter (i)
+  to set a attribute for each type of card, when the cards were randomly set from javascript (in the for loop shown below)  
+  
+  
+  `
+        for (let i =0 ; i < scrambledArray.length; i++){
+            behinds[i].innerHTML = cardIcons[scrambledArray[i]];
+        }
+     }
+ `
+  
+ At this point it was pointed out to me that including this in the html would also be possible, this was so much simpler and I used that method.
+  
 
   
     
+ #### Manual Testing for Bugs
+  When I had the game working I set about using it with a view to identifying any possible flaws in the logic or a combination of user actions which would
+  cause the program to fail. To this end I played the game through numerous times checking for expected outcomes and noting in which situations a fault occured.
+  I also cycled through the various screen sizes and noted any mis-alignment of elements on the screen.  
+                                                  
+  
+  Then I methodically worked through the list of faults and corrected the code to solve each bug.  
+                                                  
+  
+  Some of the faults are listed here along with how I fixed them.
+                                                  
+  - There were many faults with the appearance of the game and these were corrected with CSS properties.
+  - The Instruction Page was not retracting up completely out of view at certain screen sizes (length), solved by re-positioning using the top property.
+  - All the cards should be 'unclickable' while the game was not being played.  If a user randomly clicked on cards before the first play through, then
+    these cards would be out of synch with the remainder and would show the wrong face during play. I set the pointerEvent property of the cards elements to 'none'
+    until the start button was clicked.
+  - Once a card had been turned it should be unclickable untill another card had been turned and the comparison made.  I set the pointerEvents property
+    for that card to "none" within the compare function leaving it this way until the second card had been turned and just before the compare function was called.
+  - When a match was made the two matched cards needed to be made 'unclickable' for the rest of the game cycle. I used the pointerEvents property also for this.
+  - During the one second gap between two un-matched cards being re-turned back down, the player should not be able to click another un-turned card.
+    It was not possible to use the pointerEvents property for this as it re-set the pointerEvents property of the matched pairs already found.  To solve this I declared a           variable 'freezeOut' set to false.  I put this in an if statement in the turncard function which returned from the function immediately if true.  I could then set freezeOut     to the appropriate value depending on game state.  
+  
+  
+   `function turnCard(){
+    if(freezeOut){                //prevents user clicking on card during 1 second delay before unmatched cards are re-turned
+    return;
+    }
+   `
+  
+  - If a player pressed the start button mid-game ie. before the victory function had been called it caused the timer to run at double speed.  This was fixed by resetting the 
+    timer as the first action in the startGame function.  
+  - If a player pressed the start button mid game with only one unmatched card turned, the matching algorithm would not work due to the `firstItemClicked` variable 
+    being the wrong value.  I set this to true at the start of the startGame function which solved the issue.  
+                                                    
+                                                    
+   #### Testing game for achievement of User Goals.<br>
+  
+  
+  |                       Goal                                              |                          Outcome                                                               |
+  |-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+  |The rules and final aim of the game to be obvious.                       |Instruction Page button prominently displayed.                                                  |
+  |To be entertained and engaged with the game from the initial load.       |Colour,sound and animation used in an effort to engage user.                                    |
+  |The game to function correctly and gameplay to be intuitive.             |No logic errors in code, sound used to signal correct/incorrect flips.                          |
+  |To be able to play the game on various different devices.                |Media queries used to make game accessible across a range of devices.                           |
+  |To be able to gauge/score my performance.                                |Timer function and Best time function meets this need.                                          |
+  |To be able to challenge myself by increasing difficulty of the game.     |Easy/Hard difficulty toggle options provided.                                                   |
+  |To be able to play the game on various different devices.                |Media queries used to make game accessible across a range of devices.                           |
+  |To be able to mute music/sound effects if so desired.                    |Music and sounds are optional, changed via the Instruction/option page.                         |
+  |To provide a fun game.                                                   |Colour,sound and animation used in an effort to engage user.                                    |
+  |To provide a game to stimulate mental function.                          |Game play requires attention and focus.                                                         |
+  |To encourage continued use of the game.                                  |Colour,sound and animation used in an effort to entertain user and encourage continued use.     |
+   
+    
+    
+ #### Automated Testing
+  I did not have the expertise to use a unit-testing framework such as Jasmine.   
+    
+    
+ #### Issues Remaining (Known to me)
+ There is a very small lag between the start button being clicked and the timer starting.  This issue appeared when I put the timer reset code in the startGame function
+ to handle the problem of the timer running too fast.  
  
+ It may have been preferable to have the music/sound effects toggle icons visible at all times, but the games are short enough that it should not be an issue for anybody.  
+  
+ When a user clicks on the Easy/Hard button in order to change difficulty, the display is not up-dated with the extra cards untill the start button is clicked and the game 
+ begins. This has no adverse effect on game-play but it may have been better from a UX point of view to have the extra cards displayed straight away to confirm the players        actions.  
   
   
   
   </details>
 
+  
+  
+  
+  
  # Deployment
   <details>
     
