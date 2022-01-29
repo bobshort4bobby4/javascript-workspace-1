@@ -133,6 +133,9 @@ can improve mental function.
   - [autoprefixer.github.io](https://autoprefixer.github.io/) used to improve browser compatibility.
   - [Freeconvert.com](https://www.freeconvert.com) was used to convert the background image file to the  webp format.
   - [https://caniuse.com/webp](https://caniuse.com/webp)  used to check compatibility of the webp file format.
+  - [color.a11y.com](https://color.a11y.com) used for testing colour contrasts.  
+  - [webaccessibility.com](https://webaccessibility.com) used to check for any accessibility issues.  
+  
  
 </details>
 
@@ -166,7 +169,35 @@ can improve mental function.
   The Javascript file was validated using JSHint, with the following result.  The `New JavaScript features (ES6)` option was ticked in the 
   Configure menu.<br>
   
-  ![jshint result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/jshint-validation-pp2.png)
+  ![jshint result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/jshint-validation-pp2.png)  
+    
+    
+  #### WAVE Web Accessibility Evaluation Tool
+  The WAVE tool was used to test the page for accessibility.  The inital result produced 8 contrast errors, these were caused by the colour of the ink used for the times  (orange).  
+    
+  ![initial wave result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/wave-result-pp2.png)  
+    
+    
+  I changed the ink colour to black, this produced no contrast errors but to me at least was extremely hard to see against the blue background.  
+  
+    
+  ![wave result black ink](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/wave-result-black-pp2.png)  
+    
+    
+  I then decided to check the webpage in two other accessibility checkers namely color.a11y.com and webaccessibility.com.  Both of these sites reported no errors so I will use the original orange colour in the deployed site.  
+    
+    
+  ![color.a11y result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/a11y-colourcontrast-pp2.png)  
+     
+    
+    
+  
+    
+  ![accessibility.com result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/web-accessibility-pp2.png)
+    
+  
+    
+ 
   
   
   
