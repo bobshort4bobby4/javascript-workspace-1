@@ -50,7 +50,7 @@ musicOption.addEventListener("click", toggleMusic);
 let closex = window.document.querySelector(".close");
 let mod = document.querySelector(".modal-wrapper");
 closex.addEventListener("click", hideModal); // eventlistener for modal close on x
-mod.addEventListener("click",hideModal);//event listener for modal close on entire screen
+mod.addEventListener("click",hideModal); //event listener for modal close on entire screen
 
 
 
@@ -80,23 +80,20 @@ function startGame() {
         gameMusic.play();
         gameMusic.volume = 0.2;
     }
-    window.clearInterval(clock);//reset timer 
-    firstItemClicked = true;// reset in case user did not complete last game cycle
-    cards.forEach(card => card.classList.remove("turn"));//remove turn class from all cards
-                                                        // the above line may not be needed any longer as cards are turned in victory
-
-    if(diffToggle === "easy") {//set up for easy option
+    window.clearInterval(clock); //reset timer 
+    firstItemClicked = true; // reset in case user did not complete last game cycle
+    if(diffToggle === "easy") { //set up for easy option
         console.log("in easy if statement");
         cards = document.querySelectorAll('.card');
         let numberOfCardDivs = cards.length;
-        if(numberOfCardDivs === 18) {//if previous game was hard remove extra cards
+        if(numberOfCardDivs === 18) { //if previous game was hard remove extra cards
             for(let i = 0; i < 6; i++){
                 let parent = document.getElementById("box-container");
                 let child = parent.lastElementChild;
                 parent.removeChild(child);
             }
-        cards = document.querySelectorAll('.card');//NB this line and following moved from for loop immediately above to here after testing process, 
-        cards.forEach(card => card.classList.remove("resize-cards"));// seems to work fine and avoids code being run multiple times unnecessarily nb comment for testing remove if no prob
+        cards = document.querySelectorAll('.card');
+        cards.forEach(card => card.classList.remove("resize-cards"));
         }
 
         let panelarray = [0,1,2,3,4,5,6,7,8,9,10,11];
@@ -117,7 +114,7 @@ function startGame() {
         ];
     }
    
-    if(diffToggle === "hard"){//set up for hard option
+    if(diffToggle === "hard"){ //set up for hard option
         console.log("in hard if statement");
         panelarray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
         scrambledArray = scramble(panelarray);
@@ -151,15 +148,14 @@ function startGame() {
         }
     }
          /*===get array of cards-------------*/
-         cards = document.querySelectorAll('.card');//change size of cards to reflect greater number 
+         cards = document.querySelectorAll('.card'); //change size of cards to reflect greater number 
          cards.forEach(card => card.classList.add("resize-cards"));
 
-        /* note to self use event delegation for this  remove before finish*/
         cards.forEach(card => card.addEventListener('click', turnCard));
         }
 
-        currentSeconds = 0;
-        currentMinutes = 0;
+    currentSeconds = 0;
+    currentMinutes = 0;
     /*call the function to populate panels face-side passing in the icons and the random placing*/
     populateBehindCards(cardIcons, scrambledArray);
     //--make cards clickable
@@ -190,7 +186,7 @@ function startGame() {
             } //end of sound code block
         }
        
-        this.classList.add("turn");
+        this.classList.add("turn"); // turn card
         this.style.pointerEvents = "none"; //stops user clicking on already turned card before second card choice
         card1 = this;
         firstItemClicked = false;    
@@ -198,9 +194,9 @@ function startGame() {
     }
 
     firstItemClicked = true;  // resets this  value so next time this function is called preceeding if block is run
-    this.classList.add("turn");
+    this.classList.add("turn"); // turn card
      //code for specific icon sounds
-     let ico1 = this.getElementsByClassName("icon");
+    let ico1 = this.getElementsByClassName("icon");
     if(soundfxToggle) {
         if(ico1[0].getAttribute("data-type") === "baby") {
         babyLaugh.play();
@@ -224,7 +220,7 @@ function startGame() {
     freezeOut = true;
     let ico1 = card1.getElementsByClassName("icon");
     let ico2 = card2.getElementsByClassName("icon");
-    if(ico1[0].getAttribute("data-type") === ico2[0].getAttribute("data-type"))     {
+    if(ico1[0].getAttribute("data-type") === ico2[0].getAttribute("data-type")) { // compares the two flipped cards
         if(soundfxToggle){matchsound.play();}
         card1.style.pointerEvents = "none"; // stops this card being turned again in this game cycle
         card2.style.pointerEvents = "none"; // stops this card being turned again in this game cycle
@@ -247,10 +243,10 @@ function startGame() {
         } else {
         // do the un-matched stuff
             if(soundfxToggle){unmatchedSound.play();}    
-            setTimeout(() => {//display unmatched cards for 1 second before re-turning
+            setTimeout(() => { //display unmatched cards for 1 second before re-turning
             card1.classList.remove("turn");
             card2.classList.remove("turn");
-            card1 = null;// re-set cards
+            card1 = null; // re-set cards
             card2 = null;
             freezeOut = false; // stops turncard function running
         return;
@@ -316,8 +312,8 @@ return array;
     showModal();
     if(soundfxToggle){victorySound.play();}
     setTimeout(()=> {
-    cards.forEach(card => card.style.pointerEvents="none");
-    cards.forEach(card => card.classList.remove("turn"));
+    cards.forEach(card => card.style.pointerEvents="none");  // disables turning of cards
+    cards.forEach(card => card.classList.remove("turn"));  // ensures all cards are face down before a new game is started
     },1000);
     stopClock();
     numberOfMatches = 0;
@@ -328,11 +324,11 @@ return array;
  * A function toupdate and display victory screen
  */
  function showModal() {
-    document.getElementById("modal-time-minutes").innerText = currentMinutes;
+    document.getElementById("modal-time-minutes").innerText = currentMinutes; // updates the modal with current and best times
     document.getElementById("modal-time-seconds").innerText = currentSeconds;
-    document.getElementById("modal-difficilty").innerText = diffToggle.toUpperCase();
+    document.getElementById("modal-difficilty").innerText = diffToggle.toUpperCase(); // updates the modal with difficulty level
     mod = document.querySelector(".modal-wrapper");
-    mod.style.display = "block";
+    mod.style.display = "block"; // shows modal
 }
 
 /**
