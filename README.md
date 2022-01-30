@@ -16,8 +16,9 @@ This project is the second one I've undertaken as part of the Full Stack Softwar
 
 It is a version of the kids memory card game, familiar to most people.  The aim is to turn the cards over in pairs and 
 note the position of the various icons on the face side, if they match they are  left face-side up, if not matched they
-are flipped back to blank-side up.  The game is won when all the pairs are found.
-<br>
+are flipped back to blank-side up.  The game is won when all the pairs are found.  The game will have two difficulty levels and options to toggle the music and soundfx.  
+
+
 
 Memory games have been shown to greatly help children develop key skills. Brain functions such as focus, attention and concentration
 are improved by games such as this one. Visual recognition is also improved as is both short-term and long-term memory.<br>
@@ -256,10 +257,9 @@ can improve mental function.
     
   #### Responsiveness
   Media queries based on screen width were used to ensure the page displayed correctly across a range of screen sizes.
-  Breakpoints used are as follows 280px, 375px, 425px, 768px, 1024px, 1440px, 1700px, 1900px and 2100px.
-  Queries were also implemented for landscape mode (orientation:landscape) at the following 5 breakpoints: 
-  (min-height:250px and max-height:280px),
-  (min-height:281px and max-height:374px),    
+  Breakpoints used are as follows 375px, 425px, 600px, 768px, 1024px, 1300px, 1440px, 1700px and 1900px.
+  Queries were also implemented for landscape mode (orientation:landscape) at the following 5 breakpoints:  
+  (min-height:280px and max-height:374px),    
   (min-height:375px and max-height:424px),  
   (min-height:425px and max-height:595px),  
   (min-height:596px and max-height:767px),  
