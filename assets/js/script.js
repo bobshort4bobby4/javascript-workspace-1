@@ -189,7 +189,7 @@ function startGame() {
             siren.play();
             } //end of sound code block
         }
-
+       
         this.classList.add("turn");
         this.style.pointerEvents = "none"; //stops user clicking on already turned card before second card choice
         card1 = this;
