@@ -16,8 +16,9 @@ This project is the second one I've undertaken as part of the Full Stack Softwar
 
 It is a version of the kids memory card game, familiar to most people.  The aim is to turn the cards over in pairs and 
 note the position of the various icons on the face side, if they match they are  left face-side up, if not matched they
-are flipped back to blank-side up.  The game is won when all the pairs are found.
-<br>
+are flipped back to blank-side up.  The game is won when all the pairs are found.  The game will have two difficulty levels and options to toggle the music and soundfx.  
+
+
 
 Memory games have been shown to greatly help children develop key skills. Brain functions such as focus, attention and concentration
 are improved by games such as this one. Visual recognition is also improved as is both short-term and long-term memory.<br>
@@ -160,6 +161,15 @@ can improve mental function.
   ![a picture of the victory screen](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/victory-pp2.png)
   
   
+  ### Animated Start Button
+  The start button is animated whilst the game is not in play, in order to direct the user's attention to it.
+  
+  
+  ### Possible Future Features
+  I'd would like to add extra features to the game such as;
+  - Progressively harder levels as the player finishes each stage, this will be achieved by adding extra cards and shortening the time the un-matched cards are left turned.
+  - Different colours and icons on the face side of the cards as player progresses through the game.
+  - Set up a high-scores table on localStorage so players could see their ranking.
   
   
   
@@ -214,7 +224,16 @@ can improve mental function.
   
   ![css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/css-validation-pp2.png)
     
+   The autoprefixer parsed css file was tested using the W3c CSS validator, which showed no errors but produced 58 warnings.  The warning were all of the type "is a vendor extension" as shown below.  
     
+    
+  ![a picture of the autoprefixer css warnings](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/csswarning-pp2.png)  
+  
+  
+  
+  
+  
+  ![a picture of the autoprefixer css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/autoprefixerresult-pp2.png)
   
   #### W3c HTML Validator
   The HTML was tested with the W3c HTML Validator with no error returned.  
@@ -257,8 +276,8 @@ can improve mental function.
   #### Responsiveness
   Media queries based on screen width were used to ensure the page displayed correctly across a range of screen sizes.
   Breakpoints used are as follows 280px, 375px, 425px, 768px, 1024px, 1440px, 1700px, 1900px and 2100px.
-  Queries were also implemented for landscape mode (orientation:landscape) at the following 5 breakpoints: 
-  (min-height:250px and max-height:280px),
+  Queries were also implemented for landscape mode (orientation:landscape) at the following 5 breakpoints:  
+  (min-height:250px and max-height:280px),  
   (min-height:281px and max-height:374px),    
   (min-height:375px and max-height:424px),  
   (min-height:425px and max-height:595px),  
@@ -306,9 +325,16 @@ can improve mental function.
             behinds[i].innerHTML = cardIcons[scrambledArray[i]];
         }
      }
- `
+  `
   
- At this point it was pointed out to me that including this in the html would also be possible, this was so much simpler and I used that method.
+  At this point it was pointed out to me that including this in the html would also be possible, this was so much simpler and I used that method.  
+                                                    
+  The tiles were flipping askew due to me having given them both a small padding and margin value.  This issue was easily fixed once I had tracked down what was causing it.   
+                                                    
+                                                    
+  ![a picture of the askew tile](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/askewflippedtile-pp2.png)                                                
+                                                  
+                                                  
   
 
   
@@ -469,5 +495,7 @@ can improve mental function.
   
     
   </details>
-
+  
+  
+ 
 
