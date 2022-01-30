@@ -374,7 +374,7 @@ can improve mental function.
     being the wrong value.  I set this to true at the start of the startGame function which solved the issue.  
                                                     
                                                     
-   #### Testing game for achievement of User Goals.<br>
+   #### Testing game for achievement of User Goals.  
   
   
   |                       Goal                                              |                          Outcome                                                               |
@@ -426,7 +426,7 @@ can improve mental function.
 #### GitHub Pages
    
   GitHub Pages is a static site hosting service which uses files from a GitHub repository to publish a website.  I used Github Pages to deploy this project
-    following the process set out below.<br>
+    following the process set out below.  
     
   1. Open the Github repository page you wish to publish, in this case [Here](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/).
   1. Click on the 'Settings' option from the list of options above the repo contents.
