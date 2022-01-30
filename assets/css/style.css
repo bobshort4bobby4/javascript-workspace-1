@@ -58,6 +58,7 @@ header div {
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
+    margin:0 auto;
 }
 
 
@@ -94,7 +95,7 @@ header div {
 }
 
 .resize-cards {
-    width: calc(18% - 10px) !important;
+    width: calc(24% - 10px) !important;
   
 }
 
@@ -238,12 +239,16 @@ header div {
     #scores-region {
         font-size:0.9rem;
     }
+
+    #inst-btn {
+        font-size:1.1rem;
+    }
       
     }
 
 @media screen and (min-width:375px) {
     .resize-cards {
-        width:calc(17% - 10px) !important;
+        width:calc(24% - 10px) !important;
     
       
     }
@@ -267,6 +272,9 @@ header div {
         font-size:1.1rem;
     }
 
+    .resize-cards {
+        width:calc(25% - 10px) !important;
+    }
 }
 
 
@@ -368,7 +376,7 @@ header div {
 
 }
 
-@media screen and (min-width:1900px) {
+@media screen and (min-width:1900px) {}
     
 
 @media screen and (min-width:2100px) {
@@ -399,7 +407,7 @@ header div {
 
 @media screen and (orientation:landscape) and (min-height:250px)  and (max-height:280px) {
     .card {
-        width:calc(10% - 1px);
+        width:calc(13% - 1px);
         font-size:22px;
     }
 
@@ -407,6 +415,10 @@ header div {
         width:45%;
         left:-11%;
         margin-top:8px;
+    }
+
+    #start {
+        margin-top:5px;
     }
 
     #instructions-div {
@@ -427,7 +439,7 @@ header div {
 
 
     .resize-cards {
-        width:calc(11% - 10px)!important;
+        width:calc(14% - 10px)!important;
         
     }
 
@@ -458,7 +470,7 @@ header div {
 
     .card {
         width:calc(15% - 10px);
-        font-size:22px;  
+        font-size:35px;  
     }
 
 
@@ -481,7 +493,8 @@ header div {
     }
 
     .resize-cards {
-        width:calc(11% - 10px)!important;
+        width:calc(10% - 10px)!important;
+        font-size: 35px;
     
     }
 
@@ -498,6 +511,10 @@ header div {
     #instruction-page p {
         margin:8px auto;
     }
+
+    #start {
+        margin-top:10px;
+    }
  
 }
 
@@ -508,7 +525,7 @@ header div {
     }
 
     .card {
-        width:calc(15% - 10px);
+        width:calc(20% - 10px);
         font-size:22px;  
     }
 
@@ -518,10 +535,10 @@ header div {
         width:45%;
         left:-11%;
     }
-    /*
+    
     #start {
-        margin-top:7px;
-    }*/
+        margin-top:3px;
+    }
 
     #instructions-div {
         right:-6%;
@@ -530,13 +547,13 @@ header div {
     }
 
     #srt-ins-btn {
-        margin-top:3px;
+        margin-top:10px;
         display: flex;
         flex-direction: row;
     }
 
     .resize-cards {
-        width:calc(11% - 10px)!important;
+        width:calc(14% - 10px)!important;
        
     }
 
@@ -568,7 +585,7 @@ header div {
 
     .card {
         width:calc(15% - 10px);
-        font-size:22px;  
+        font-size:32px;  
     }
 
 
@@ -578,7 +595,7 @@ header div {
      }
 
      .resize-cards {
-        width:calc(11% - 10px)!important;
+        width:calc(14% - 10px)!important;
       
     }
 
@@ -592,13 +609,17 @@ header div {
         margin-top:20px;
     }
 
+    #box-container {
+        margin: 33px auto;
+    }
+
     #scores-region {
         font-size:1rem;
     }
 
     .card {
-        width:calc(15% - 10px);
-        font-size:27px;  
+        width:calc(16% - 10px);
+        font-size:32px;  
     }
 
 
@@ -608,7 +629,7 @@ header div {
      }
 
      .resize-cards {
-        width:calc(11% - 10px)!important;
+        width:calc(14% - 10px)!important;
        
     }
 }
@@ -627,7 +648,7 @@ header div {
     }
 
     .card {
-        width:calc(17% - 10px);
+        width:calc(20% - 10px);
         font-size:33px;  
     }
 
@@ -636,6 +657,10 @@ header div {
     #instruction-page {
          font-size:1.5rem;
      }
+
+    #inst-btn {
+        font-size:1.2em;
+    }
 
      .resize-cards {
         width:calc(16% - 10px)!important;
