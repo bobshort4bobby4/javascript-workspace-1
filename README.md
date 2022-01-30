@@ -374,7 +374,7 @@ can improve mental function.
     being the wrong value.  I set this to true at the start of the startGame function which solved the issue.  
                                                     
                                                     
-   #### Testing game for achievement of User Goals.<br>
+   #### Testing game for achievement of User Goals.  
   
   
   |                       Goal                                              |                          Outcome                                                               |
