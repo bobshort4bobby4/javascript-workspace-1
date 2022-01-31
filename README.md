@@ -283,8 +283,10 @@ can improve mental function.
     
   #### Responsiveness
   Media queries based on screen width were used to ensure the page displayed correctly across a range of screen sizes.
-  the Chrome and Edge browsers were used to test responsiveness.
-  Breakpoints used are as follows 280px, 375px, 425px, 768px, 1024px, 1440px, 1700px, 1900px and 2100px.
+  the Chrome and Edge browsers were used to test responsiveness.  
+  
+  Breakpoints used are as follows 280px, 375px, 425px, 768px, 1024px, 1440px, 1700px, 1900px and 2100px.  
+  
   Queries were also implemented for landscape mode (orientation:landscape) at the following 5 breakpoints:  
   (min-height:250px and max-height:280px),  
   (min-height:281px and max-height:374px),    
