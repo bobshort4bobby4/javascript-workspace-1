@@ -214,8 +214,16 @@ can improve mental function.
   
   
   #### Lighthouse
-  The web page was tested using the Lighthouse feature on the chrome browser giving the following result.
-  ![lighthouse desktop result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/lighthouseresultpp2.png)  
+  The web page was tested using the Lighthouse feature on the chrome browser giving the following result for desktop.   
+  
+    
+  
+  ![lighthouse desktop result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/lighthouseresultpp2.png)    
+  
+  The Lighthouse result for mobile is shown below.  
+    
+    
+  ![a picture of the lighthouse mobile result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/mobilelighthouse-pp2.png)
     
   
   #### W3c CSS Validator
@@ -275,7 +283,10 @@ can improve mental function.
     
   #### Responsiveness
   Media queries based on screen width were used to ensure the page displayed correctly across a range of screen sizes.
-  Breakpoints used are as follows 280px, 375px, 425px, 768px, 1024px, 1440px, 1700px, 1900px and 2100px.
+  the Chrome and Edge browsers were used to test responsiveness.  
+  
+  Breakpoints used are as follows 280px, 375px, 425px, 768px, 1024px, 1440px, 1700px, 1900px and 2100px.  
+  
   Queries were also implemented for landscape mode (orientation:landscape) at the following 5 breakpoints:  
   (min-height:250px and max-height:280px),  
   (min-height:281px and max-height:374px),    
