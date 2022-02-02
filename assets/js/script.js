@@ -6,6 +6,7 @@ let card1;
 let card2;
 let numberOfMatches = 0;
 let freezeOut = false;
+let scrambledArray;
 
 // music variables
 let musicToggle = false;
@@ -28,10 +29,7 @@ let bestSeconds;
 let bestMinutes;
 
 let cards = document.querySelectorAll('.card');
-console.log(cards);
 cards.forEach(card => card.style.pointerEvents="none"); // disable all cards untill start
-
-
 cards.forEach(card => card.addEventListener('click', turnCard)); // call turnCard function when card clicked
 
 /*eventlistener for difficulty option*/
@@ -73,13 +71,14 @@ menu_btn.addEventListener("click", slideInstruction);
  * function to start and run game
  */
 function startGame() {
-    console.log("in startgame function)");
     startButton.style.animationPlayState = "paused"; // stops the start button animation while playing 
     if(musicToggle) {
         gameMusic.load();
         gameMusic.play();
         gameMusic.volume = 0.2;
     }
+    cards.forEach(card => card.style.pointerEvents="none");  // disables turning of cards
+    cards.forEach(card => card.classList.remove("turn"));  // ensures all cards are face down before a new game is started
     window.clearInterval(clock); //reset timer 
     firstItemClicked = true; // reset in case user did not complete last game cycle
 <<<<<<< HEAD
@@ -87,7 +86,6 @@ function startGame() {
 =======
 >>>>>>> bae73868e2f2cb48678c180671ebc41cc310dad5
     if(diffToggle === "easy") { //set up for easy option
-        console.log("in easy if statement");
         cards = document.querySelectorAll('.card');
         let numberOfCardDivs = cards.length;
         if(numberOfCardDivs === 18) { //if previous game was hard remove extra cards
@@ -119,7 +117,6 @@ function startGame() {
     }
    
     if(diffToggle === "hard"){ //set up for hard option
-        console.log("in hard if statement");
         panelarray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
         scrambledArray = scramble(panelarray);
         cardIcons = [
@@ -145,8 +142,8 @@ function startGame() {
         cards = document.querySelectorAll('.card');
         let numberOfCardDivs = cards.length;
         if(numberOfCardDivs === 12) { //add extra cards if needed
-            targetBox= document.getElementById("box-container");
-            div1 = document.querySelector(".card"); 
+            let targetBox= document.getElementById("box-container");
+            let div1 = document.querySelector(".card"); 
             for(let i = 0; i < 6; i++){
                 targetBox.appendChild(div1.cloneNode(true) );
         }
@@ -231,7 +228,7 @@ function startGame() {
         card1 = null;
         card2 = null;
         firstItemClicked = true;
-        numberOfMatches++; 
+        numberOfMatches++ ; 
         if(numberOfMatches === 6 && diffToggle === "easy") { // checks if victory conditions are met
             gameMusic.pause();
             victory(); 
@@ -283,19 +280,19 @@ function startGame() {
  * @returns 
  */
  function scramble(array){
-    var i = array.length,
-    j = 0,
-    temp;
+    var i = array.length;
+    /*var j = 0,*/
+    /*let temp;*/
 
-while (i--) {
+    while (i--) {
 
-    j = Math.floor(Math.random() * (i+1));
+        j = Math.floor(Math.random() * (i+1));
 
-    // swap  elements 
-    temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-}
+        // swap  elements 
+        let temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 return array;
 }
 
