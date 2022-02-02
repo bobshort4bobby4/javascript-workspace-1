@@ -82,7 +82,10 @@ function startGame() {
     }
     window.clearInterval(clock); //reset timer 
     firstItemClicked = true; // reset in case user did not complete last game cycle
+<<<<<<< HEAD
     cards.forEach(card => card.classList.remove("turn"));//remove turn class from all cards
+=======
+>>>>>>> bae73868e2f2cb48678c180671ebc41cc310dad5
     if(diffToggle === "easy") { //set up for easy option
         console.log("in easy if statement");
         cards = document.querySelectorAll('.card');
